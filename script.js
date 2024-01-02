@@ -46,4 +46,4 @@ const maquinaEscribir = (text = '',tiempo = 200, etiqueta = '') => {
     }
   }, tiempo)
 }
-maquinaEscribir(' giOttimi-Dolce       ',100,maquina);
+maquinaEscribir(' Ottimi-Dolce       ',100,maquina);
