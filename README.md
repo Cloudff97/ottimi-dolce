@@ -1,2 +1,2 @@
-# Ottimi Dolce
+# ottimi-dolce
 Tienda de paletas en linea
