@@ -214,7 +214,7 @@ article{
 }
 
 .home .content{
-    max-width: 60rem;
+    max-width: 58.7rem;
 }
 
 .home .content h1{
@@ -287,11 +287,17 @@ article{
     margin: .3rem;
 }
 
+
+.other-menu{
+    border: var(--border);
+    margin: 2rem 7%;
+}
+
 .other-menu .box-container .box{
     text-align: center;
-    border: var(--border);
     margin: .3rem;
-    padding: 2rem;
+    padding: 1.2rem;
+
 }
 
 .menu .box-container .box .image{
