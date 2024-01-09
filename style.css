@@ -31,7 +31,7 @@ html{
     user-select: none;
     position: fixed;
     background: var(--bg);
-    z-index: 1000;
+    z-index: 100;
     transition: .3s linear;
 }
 .loading{
@@ -88,6 +88,10 @@ section{
     padding: 2rem 7%;
 }
 
+article{
+    padding: 2rem 7%;
+}
+
 .heading{
     text-align: center;
     color: #fff;
@@ -120,16 +124,16 @@ section{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1.5rem 7%;
+    padding: 1.1rem 7%;
     border-bottom: var(--border);
     position: fixed;
     top: 0; left: 0; right: 0;
-    z-index: 100;
+    z-index: 10;
 }
 
 .header .logo img{
-    height: 6rem;
-    border-radius: 15%;
+    height: 5rem;
+    border-radius: 25%;
 }
 
 .header .navbar a{
@@ -214,7 +218,7 @@ section{
 }
 
 .home .content h1{
-    font-size: 6rem;
+    font-size: 6.2rem;
     text-transform: uppercase;
     color: #eee;
 }
@@ -274,51 +278,34 @@ section{
 
 .menu .box-container{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
     gap: 1.5rem;
 }
 
 .menu .box-container .box{
     text-align: center;
-    border: var(--border);
-    padding: 2rem;
-}
-
-.menu .box-container .box .icons a{
-    height: 5rem;
-    width: 5rem;
-    line-height: 5rem;
-    font-size: 2rem;
-    border: var(--border);
-    color: #fff;
     margin: .3rem;
 }
 
-.menu .box-container .box .icons a:hover{
-    background: var(--main-color);
+.other-menu .box-container .box{
+    text-align: center;
+    border: var(--border);
+    margin: .3rem;
+    padding: 2rem;
 }
 
 .menu .box-container .box .image{
-    padding: 2.5rem 0;
+    padding: 0.9rem 0;
     overflow: hidden;
 }
 
 .menu .box-container .box .image img{
-    height: 18rem;
+    height: 14rem;
 }
 
 .menu .box-container .box .content h3{
     color: #fff;
-    font-size: 2.5rem;
-}
-
-.menu .box-container .box .content .start{
-    padding: 1.5rem;
-}
-
-.menu .box-container .box .content .start i{
-    font-size: 1.7rem;
-    color: var(--main-color);
+    font-size: 1.4rem;
 }
 
 .menu .box-container .box .content .price{
@@ -332,64 +319,119 @@ section{
     font-size: 1.5rem;
 }
 
-.products .box-container{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-    gap: 1.5rem;
+video{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
 }
 
-.products .box-container .box{
-    text-align: center;
-    border: var(--border);
-    padding: 2rem;
+.products .container{
+    position: relative;
+    width: 60%;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
 }
 
-.products .box-container .box .icons a{
-    height: 5rem;
-    width: 5rem;
-    line-height: 5rem;
-    font-size: 2rem;
-    border: var(--border);
-    color: #fff;
-    margin: .3rem;
+.products .slider-container .slider{
+    height: 45rem;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 2rem 30%;
 }
 
-.products .box-container .box .icons a:hover{
+.products .slider-container .slider .slider-content{
+    flex: 1 1 20rem;
+    animation: sliderContent .8s linear .7s backwards;
+}
+@keyframes sliderContent{
+    0%{
+        opacity: 0;
+        transform: translateX(-7rem);
+    }
+}
+
+.products .slider-container .slider .image{
+    flex: 50% 1 auto;
+}
+
+.products .slider-container .slider .image img{
+    width: 12rem;
+    animation: sliderImage .8s linear;
+}
+@keyframes sliderImage{
+    0%{
+        opacity: 0;
+        transform: translateY(-7rem);
+    }
+}
+
+.products .slider-container .slider .slider-content h3{
+    font-size: 4.2rem;
+    color: #eee;
+}
+
+.products .slider-container .slider .slider-content p{
+    font-size: 1.6rem;
+    color: #eee;
+    padding: .3rem 0;
+    letter-spacing: .1rem;
+}
+
+.products .slider-container .slider .slider-content .slider-btn{
+    margin-top: 1.5rem;
+    display: inline-block;
+    background: #2b2b2b;
+    color: #eee;
+    font-size: 1.5rem;
+    padding: .7rem 3rem;
+}
+
+.products .slider-container .slider .slider-content .slider-btn:hover{
     background: var(--main-color);
 }
 
-.products .box-container .box .image{
-    padding: 2.5rem 0;
-    overflow: hidden;
+.container .slider-container{
+    display: none;
 }
 
-.products .box-container .box .image img{
-    height: 25rem;
+.container .slider-container.active{
+    display: block;
 }
 
-.products .box-container .box .content h3{
+.container #prev,
+.container #next{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
     color: #fff;
-    font-size: 2.5rem;
+    background: rgba(101, 98, 98, 0.1);
+    height: 5rem;
+    width: 5rem;
+    line-height: 5.1rem;
+    font-size: 3.5rem;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 50%;
 }
 
-.products .box-container .box .content .start{
-    padding: 1.5rem;
+.container #prev:hover,
+.container #next:hover{
+    background: #313131;
+    color: #010103;
+    font-size: 3rem;
 }
 
-.products .box-container .box .content .start i{
-    font-size: 1.7rem;
-    color: var(--main-color);
+.container #prev{
+    left: 2rem;
 }
 
-.products .box-container .box .content .price{
-    color: #fff;
-    font-size: 2.5rem;
-}
-
-.products .box-container .box .content .price span{
-    text-decoration: line-through;
-    font-weight: lighter;
-    font-size: 1.5rem;
+.container #next{
+    right: 2rem;
 }
 
 .review .box-container{
@@ -554,9 +596,11 @@ section{
     .header .navbar{
         position: absolute;
         top:100%; right: -100%;
-        background: #fff;
-        width: 50%;
+        background: #2b2b2b;
+        color: #eee;
+        width: 100%;
         height: calc(100vh - 9.5rem);
+        text-align: center;
     }
 
     .header .navbar.active{
@@ -564,11 +608,12 @@ section{
     }
 
     .header .navbar a{
-        color: var(--black);
+        color: #eee;
         display: block;
-        margin: 1.5rem;
+        margin-top: 4.5rem;
         padding: .5rem;
-        font-size: 2rem;
+        font-size: 2.2rem;
+        border-bottom: .1rem solid #eee;
     }
 
     .header .search-form{
@@ -592,7 +637,27 @@ section{
 
     .home .content p{
         font-size: 1.6rem;
-        font-weight: 400;
+        font-weight: 500;
+    }
+
+    .container #prev{
+        left: 0;
+        top: 89%;
+    }
+
+    .container #next{
+        right: 0;
+        top: 89%;
+    }
+
+    .products .container{
+        width: 100%;
+    }
+    
+    .products .slider-container .slider{
+        align-items: center;
+        flex-wrap: nowrap;
+        padding: 2rem 10%;
     }
 
 }
