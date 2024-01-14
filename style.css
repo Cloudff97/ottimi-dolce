@@ -673,3 +673,18 @@ video{
         font-size: 50%;
     }
 }
+
+.box .agotado {
+    color: #ff0000;
+    font-size: 2.5rem;
+    border: 2px solid;
+    border-radius: 20px;
+    text-transform: uppercase;
+    padding: 1rem 2rem;
+    transform: translate(-11rem, 4rem) scale(.9,.9) rotate(-35deg);
+    position: absolute;
+    display: inline-block;
+}
+.box-agotado img,.box-agotado h3,.box-agotado .price{
+    opacity: .3;
+}
