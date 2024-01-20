@@ -1,19 +1,19 @@
-window.addEventListener('load', function(){
+window.addEventListener('load', () => {
   document.getElementById('preloader').classList.remove('preloader');
 });
 
 const navbar = document.querySelector(".navbar");
 const menuBtn = document.querySelector("#menu-btn");
-  menuBtn.addEventListener('click', (e) =>{
-    e.stopPropagation();
+  menuBtn.addEventListener('click', (event) =>{
+    event.preventDefault();
     navbar.classList.toggle("active");
     searchForm.classList.remove("active");
 });
 
 const searchForm = document.querySelector(".search-form");
 const searchBtn = document.querySelector("#search-btn");
-  searchBtn.addEventListener('click', (e) =>{
-    e.stopPropagation();
+  searchBtn.addEventListener('click', (event) =>{
+    event.stopPropagation();
     searchForm.classList.toggle("active");
     navbar.classList.remove("active");
 });

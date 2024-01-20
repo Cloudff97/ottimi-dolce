@@ -160,7 +160,7 @@ article{
     margin-left: 1rem;
 }
 
-.header .icons div:hover{
+.header .icons .fas:hover{
     color: var(--main-color);
 }
 
@@ -287,7 +287,6 @@ article{
     margin: .3rem;
 }
 
-
 .other-menu{
     border: var(--border);
     margin: 2rem 7%;
@@ -297,7 +296,7 @@ article{
     text-align: center;
     margin: .3rem;
     padding: 1.2rem;
-
+    border: var(--border);
 }
 
 .menu .box-container .box .image{
@@ -592,6 +591,22 @@ video{
     section, article{
         padding: 2rem;
     }
+
+    .header .search-form label:active{
+        color: var(--main-color);
+    }
+
+    .header .icons .fas:active{
+        color: var(--main-color);
+    }
+
+    .footer .links a:active{
+        background: var(--main-color);
+    }
+
+    .footer .share a:active{
+        background-color: var(--main-color);
+     }
 }
 
 @media (max-width:768px){
