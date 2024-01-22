@@ -4,19 +4,19 @@ window.addEventListener('load', () => {
 
 const navbar = document.querySelector(".navbar");
 const menuBtn = document.querySelector("#menu-btn");
-  menuBtn.addEventListener('click', (event) =>{
-    event.preventDefault();
+  menuBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
     navbar.classList.toggle("active");
     searchForm.classList.remove("active");
-});
+  });
 
 const searchForm = document.querySelector(".search-form");
 const searchBtn = document.querySelector("#search-btn");
-  searchBtn.addEventListener('click', (event) =>{
-    event.stopPropagation();
+  searchBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
     searchForm.classList.toggle("active");
     navbar.classList.remove("active");
-});
+  });
 
 window.addEventListener('scroll', () =>{
   navbar.classList.remove("active");
@@ -29,7 +29,7 @@ const maquinaEscribir = (text = '',tiempo = 200, etiqueta = '') => {
   etiqueta.innerHTML =  ''
   let i = 0
   let j = text.length
-  let escribir = setInterval(function(){
+  let escribir = setInterval(function() {
     if (i === arrayCaracteres.length) {
       etiqueta.innerHTML = text.substring(0,j)
       j--
