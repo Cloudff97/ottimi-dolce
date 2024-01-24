@@ -147,19 +147,19 @@ article{
     padding-bottom: .5rem;
 }
 
-.header .icons{
+.header .icons button{
     color: #fff;
+    background: var(--bg);
     cursor: pointer;
     font-size: 2.5rem;
-    margin-left: 2rem;
     height: 3rem;
 }
 
-.header .icons div{
+.header .icons .fas{
     margin-left: 1rem;
 }
 
-.header .icons .fas:hover {
+.header .icons button:hover {
     color: var(--main-color);
 }
 
@@ -606,7 +606,8 @@ video{
         color: var(--main-color);
     }
 
-    .header .icons .fas:active{
+    .header .icons .fa-search:active,
+    .header .icons .fa-bars:active {
         color: var(--main-color);
     }
 

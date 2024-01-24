@@ -4,17 +4,17 @@ window.addEventListener('load', () => {
 
 const navbar = document.querySelector(".navbar");
 const menuBtn = document.querySelector("#menu-btn");
-  menuBtn.addEventListener('click', (e) => {
-    e.stopPropagation();
+  menuBtn.addEventListener('click', () => {
     navbar.classList.toggle("active");
     searchForm.classList.remove("active");
   });
 
-const searchForm = document.querySelector(".search-form");
-const searchBtn = document.querySelector("#search-btn");
-  searchBtn.addEventListener('click', (e) => {
-    e.stopPropagation();
+  const searchForm = document.querySelector(".search-form");
+  const searchFormInput = document.querySelector(".search-form input");
+  const searchBtn = document.querySelector("#search-btn");
+  searchBtn.addEventListener('click', () => {
     searchForm.classList.toggle("active");
+    searchFormInput.focus();
     navbar.classList.remove("active");
   });
 
