@@ -70,6 +70,10 @@ html{
     animation-delay: 1s;
 }
 
+html::-webkit-scrollbar{
+    display: none;
+}
+
 html::-webkit-scrollbar-track{
     background: transparent;
 }
@@ -113,7 +117,6 @@ article{
     background: var(--main-color);
     cursor: pointer;
 }
-
 .btn:hover{
     letter-spacing: .1rem;
 }
@@ -140,7 +143,6 @@ article{
     font-size: 1.6rem;
     color: #fff;
 }
-
 .header .navbar a:hover{
     color:var(--main-color);
     border-bottom: .1rem solid var(--main-color);
@@ -158,7 +160,6 @@ article{
 .header .icons .fas{
     margin-left: 1rem;
 }
-
 .header .icons button:hover {
     color: var(--main-color);
 }
@@ -210,6 +211,7 @@ article{
     background: url(assets/fondo.jpg) no-repeat;
     background-size: cover;
     background-position: center;
+    background-attachment: fixed;
 }
 
 .home .content{
@@ -292,14 +294,58 @@ article{
     gap: 1.5rem;
 }
 
+.menu .box-container img{
+    cursor: pointer;
+}
+
 .menu .box-container .box{
     text-align: center;
     margin: .3rem;
+    position: relative;
+}
+
+.menu .box-container .box .image,
+.other-menu .box-container .box .image{
+    padding: 0.9rem 0;
+    overflow: hidden;
+}
+
+.menu .box-container .box .image img,
+.other-menu .box-container .box .image img{
+    height: 14rem;
+}
+
+.menu .box-container .box .content h3,
+.other-menu .box-container .box .content h3{
+    color: #fff;
+    font-size: 1.4rem;
+}
+
+.menu .box-container .box .content .price,
+.other-menu .box-container .box .content .price{
+    color: #fff;
+    font-size: 2.5rem;
+}
+
+.menu .box-container .box .content .price span,
+.other-menu .box-container .box .content .price span{
+    text-decoration: line-through;
+    font-weight: lighter;
+    font-size: 1.5rem;
+}
+
+.other-menu .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(40rem, 1fr));
+    gap: 1.5rem;
 }
 
 .other-menu{
-    border: var(--border);
-    margin: 2rem 7%;
+    margin: 2rem 0;
+}
+
+.other-menu .box-container img{
+    cursor: pointer;
 }
 
 .other-menu .box-container .box{
@@ -309,29 +355,19 @@ article{
     border: var(--border);
 }
 
-.menu .box-container .box .image{
-    padding: 0.9rem 0;
-    overflow: hidden;
-}
-
-.menu .box-container .box .image img{
-    height: 14rem;
-}
-
-.menu .box-container .box .content h3{
-    color: #fff;
-    font-size: 1.4rem;
-}
-
-.menu .box-container .box .content .price{
-    color: #fff;
+.box-container .box .agotado {
+    color: #ff0000;
     font-size: 2.5rem;
+    border: 1.5px solid;
+    border-radius: 20px;
+    text-transform: uppercase;
+    padding: .5rem 1.5rem;
+    transform: translate(-11rem, 4rem) scale(.9,.9) rotate(-35deg);
+    position: absolute;
+    display: inline-block;
 }
-
-.menu .box-container .box .content .price span{
-    text-decoration: line-through;
-    font-weight: lighter;
-    font-size: 1.5rem;
+.box-agotado img,.box-agotado h3,.box-agotado .price{
+    opacity: .4;
 }
 
 video{
@@ -538,11 +574,29 @@ video{
 .footer{
     background: var(--black);
     text-align: center;
- }
+}
 
-.footer .share{
-    padding: 1rem 0;
- }
+.footer-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(28rem, 28rem));
+    gap: 2rem;
+    place-content: center;
+}
+
+.footer-container img{
+    width: 5rem;
+    border-radius: 15%;
+}
+
+.footer-container .share-y,
+.footer-container .share-m{
+    display: flex;
+    place-content: center;
+    align-items: center;
+    border: var(--border);
+    border-radius: 6px;
+    padding: .5rem 0;
+}
 
 .footer .share a{
     height: 5rem;
@@ -550,33 +604,14 @@ video{
     line-height: 5rem;
     font-size: 2rem;
     color: #fff;
-    border: var(--border);
-    margin: .3rem;
+    margin: .1rem;
     border-radius: 50%;
+
+    &:hover{
+        color: var(--main-color);
+        scale: 1.6;
+    }
  }
-
-.footer .share a:hover{
-    background-color: var(--main-color);
- }
-
-.footer .links{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    padding: 2rem 0;
-    gap: 1rem;
-}
-
-.footer .links a{
-    padding: .7rem 2rem;
-    color: #fff;
-    border: var(--border);
-    font-size: 2rem;
-}
-
-.footer .links a:hover{
-    background: var(--main-color);
-}
 
 .footer .credit{
     font-size: 2rem;
@@ -628,7 +663,7 @@ video{
     .header .navbar{
         position: absolute;
         top:100%; right: -100%;
-        background: #2b2b2b;
+        background: rgb(0 0 0 / .9);
         color: #eee;
         width: 100%;
         height: calc(100vh - 9.5rem);
@@ -639,13 +674,19 @@ video{
         right: 0;
     }
 
+    .header .navbar a:hover{
+        border: unset;
+    }
+
     .header .navbar a{
         color: #eee;
         display: block;
         margin-top: 4.5rem;
-        padding: .5rem;
         font-size: 2.2rem;
-        border-bottom: .1rem solid #eee;
+
+        &:active{
+            scale: 1.1;
+        }
     }
 
     .header .search-form{
@@ -698,19 +739,4 @@ video{
     html{
         font-size: 50%;
     }
-}
-
-.box .agotado {
-    color: #ff0000;
-    font-size: 2.5rem;
-    border: 2px solid;
-    border-radius: 20px;
-    text-transform: uppercase;
-    padding: 1rem 2rem;
-    transform: translate(-11rem, 4rem) scale(.9,.9) rotate(-35deg);
-    position: absolute;
-    display: inline-block;
-}
-.box-agotado img,.box-agotado h3,.box-agotado .price{
-    opacity: .3;
 }
