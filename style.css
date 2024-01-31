@@ -108,17 +108,20 @@ article{
     text-transform: uppercase;
 }
 
-.btn{
+.b-btn{
     margin-top: 1rem;
     display: inline-block;
-    padding: .9rem 3rem;
+    padding: .9rem 1.8rem;
     font-size: 1.7rem;
     color:#fff;
     background: var(--main-color);
     cursor: pointer;
-}
-.btn:hover{
-    letter-spacing: .1rem;
+    box-shadow: inset 0 0 15px 0 #181818;
+    border-radius: 25px;
+
+    &:hover{
+        letter-spacing: .1rem;
+    }
 }
 
 .header{
@@ -131,10 +134,33 @@ article{
     position: fixed;
     top: 0; left: 0; right: 0;
     z-index: 10;
+
+    animation: header-menu linear both;
+    animation-timeline: scroll(root);
+    animation-range: 0 100px;
+}
+@keyframes header-menu {
+    0%{
+        height: 7.9rem;
+    }
+    25%{
+        height: 7.1rem;
+    }
+    50%{
+        height: 6.7rem;
+    }
+    75%{
+        height: 6rem;
+    }
+    100%{
+        background: rgb(0 0 0 / .5);
+        backdrop-filter: blur(5px);
+        height: 5.5rem;
+    }
 }
 
 .header .logo img{
-    height: 5rem;
+    height: 4.5rem;
     border-radius: 25%;
 }
 
@@ -151,17 +177,15 @@ article{
 
 .header .icons button{
     color: #fff;
-    background: var(--bg);
+    background: transparent;
     cursor: pointer;
     font-size: 2.5rem;
     height: 3rem;
-}
-
-.header .icons .fas{
     margin-left: 1rem;
-}
-.header .icons button:hover {
-    color: var(--main-color);
+
+    &:hover {
+        color: var(--main-color);
+    }
 }
 
 #menu-btn{
@@ -211,7 +235,6 @@ article{
     background: url(assets/fondo.jpg) no-repeat;
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
 }
 
 .home .content{
@@ -292,6 +315,7 @@ article{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
     gap: 1.5rem;
+    place-content: center;
 }
 
 .menu .box-container img{
@@ -357,17 +381,17 @@ article{
 
 .box-container .box .agotado {
     color: #ff0000;
-    font-size: 2.5rem;
+    font-size: 1.5rem;
     border: 1.5px solid;
     border-radius: 20px;
     text-transform: uppercase;
     padding: .5rem 1.5rem;
-    transform: translate(-11rem, 4rem) scale(.9,.9) rotate(-35deg);
+    transform: translate(-8rem, 4rem) scale(.9,.9) rotate(-40deg);
     position: absolute;
     display: inline-block;
 }
 .box-agotado img,.box-agotado h3,.box-agotado .price{
-    opacity: .4;
+    opacity: .2;
 }
 
 video{
@@ -586,6 +610,7 @@ video{
 .footer-container img{
     width: 5rem;
     border-radius: 15%;
+    filter: blur(2px);
 }
 
 .footer-container .share-y,

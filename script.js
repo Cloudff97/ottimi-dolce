@@ -44,7 +44,7 @@ const maquinaEscribir = (text = '',tiempo = 200, etiqueta = '') => {
     }
   }, tiempo)
 }
-maquinaEscribir(' Ottimi-Dolce       ',100,maquina);
+maquinaEscribir('  Ottimi-Dolce           ',100,maquina);
 
 const slider = document.querySelectorAll('.slider-container');
 let index = 0;
