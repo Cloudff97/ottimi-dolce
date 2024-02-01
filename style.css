@@ -118,10 +118,10 @@ article{
     cursor: pointer;
     box-shadow: inset 0 0 15px 0 #181818;
     border-radius: 25px;
-
-    &:hover{
-        letter-spacing: .1rem;
-    }
+}
+.b-btn:hover,
+.b-btn:active{
+    letter-spacing: .1rem;
 }
 
 .header{
@@ -182,10 +182,10 @@ article{
     font-size: 2.5rem;
     height: 3rem;
     margin-left: 1rem;
-
-    &:hover {
-        color: var(--main-color);
-    }
+}
+.header .icons button:hover,
+.header .icons button:active{
+    color: var(--main-color);
 }
 
 #menu-btn{
@@ -224,7 +224,8 @@ article{
     color: var(--black);
 }
 
-.header .search-form label:hover{
+.header .search-form label:hover,
+.header .search-form label:active{
     color: var(--main-color);
 }
 
@@ -232,9 +233,9 @@ article{
     min-height: 100vh;
     display: flex;
     align-items: center;
-    background: url(assets/fondo.jpg) no-repeat;
+    background: url(assets/fondo.webp) no-repeat;
     background-size: cover;
-    background-position: center;
+    background-position: bottom;
 }
 
 .home .content{
@@ -245,6 +246,9 @@ article{
     font-size: 6.2rem;
     text-transform: uppercase;
     color: #eee;
+    box-shadow: 1px 1px 5px;
+    background: rgb(0 0 0 / .5);
+    border-radius: 10px;
 }
 
 .home .content .autoEscritura{
@@ -495,7 +499,9 @@ video{
 }
 
 .container #prev:hover,
-.container #next:hover{
+.container #next:hover,
+.container #prev:active,
+.container #next:active{
     background: #313131;
     color: #010103;
     font-size: 3rem;
@@ -631,12 +637,12 @@ video{
     color: #fff;
     margin: .1rem;
     border-radius: 50%;
-
-    &:hover{
-        color: var(--main-color);
-        scale: 1.6;
-    }
  }
+ .footer .share a:hover,
+ .footer .share a:active{
+    color: var(--main-color);
+    scale: 1.6;
+}
 
 .footer .credit{
     font-size: 2rem;
@@ -662,22 +668,6 @@ video{
         padding: 2rem;
     }
 
-    .header .search-form label:active{
-        color: var(--main-color);
-    }
-
-    .header .icons .fa-search:active,
-    .header .icons .fa-bars:active {
-        color: var(--main-color);
-    }
-
-    .footer .links a:active{
-        background: var(--main-color);
-    }
-
-    .footer .share a:active{
-        background-color: var(--main-color);
-     }
 }
 
 @media (max-width:768px){
@@ -700,7 +690,7 @@ video{
     }
 
     .header .navbar a:hover{
-        border: unset;
+        border: initial;
     }
 
     .header .navbar a{
