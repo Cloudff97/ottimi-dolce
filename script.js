@@ -18,7 +18,7 @@ const menuBtn = document.querySelector("#menu-btn");
     navbar.classList.remove("active");
   });
 
-window.addEventListener('scroll', () =>{
+window.addEventListener('scroll', () => {
   navbar.classList.remove("active");
   searchForm.classList.remove("active");
 });

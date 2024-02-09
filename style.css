@@ -18,7 +18,8 @@
 html{
     font-size: 62.5%;
     overflow-x: hidden;
-    scroll-padding-top: 9rem;
+    scroll-snap-type: y mandatory;
+    scroll-padding-top: 5.5rem;
     scroll-behavior: smooth;
 }
 
@@ -70,29 +71,28 @@ html{
     animation-delay: 1s;
 }
 
-html::-webkit-scrollbar{
-    display: none;
-}
-
-html::-webkit-scrollbar-track{
+::-webkit-scrollbar{
     background: transparent;
 }
 
-html::-webkit-scrollbar-thumb{
-    background:#fff;
-    border-radius: 5rem;
+::-webkit-scrollbar-thumb{
+    background:#414141;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-button{
+    background:#000000;
+    border-radius: 10px;
 }
 
 body{
     background: var(--bg);
 }
 
-section{
-    padding: 2rem 7%;
-}
-
+section,
 article{
     padding: 2rem 7%;
+    scroll-snap-align: start;
 }
 
 .heading{
@@ -236,7 +236,16 @@ article{
     background: url(assets/fondo.webp) no-repeat;
     background-size: cover;
     background-position: bottom;
-}
+   /* transform-origin: top;
+
+    animation: home-animation linear forwards;
+    animation-timeline: view();
+    animation-range: exit;*/
+}/*
+@keyframes home-animation {
+    25%{ opacity: 1; }
+    70%, 100%{ opacity: 0; scale: 2; }
+}*/
 
 .home .content{
     max-width: 58.7rem;
@@ -630,7 +639,6 @@ video{
     display: flex;
     place-content: center;
     align-items: center;
-    border: var(--border);
     border-radius: 6px;
     padding: .5rem 0;
 }
