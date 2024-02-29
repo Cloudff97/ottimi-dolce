@@ -18,7 +18,6 @@
 html{
     font-size: 62.5%;
     overflow-x: hidden;
-    scroll-snap-type: y mandatory;
     scroll-padding-top: 5.5rem;
     scroll-behavior: smooth;
 }
