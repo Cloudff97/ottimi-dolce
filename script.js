@@ -49,13 +49,13 @@ maquinaEscribir('  Ottimi-Dolce           ',100,maquina);
 const slider = document.querySelectorAll('.slider-container');
 let index = 0;
 
-function next(){
+function next() {
   slider[index].classList.remove('active');
   index = (index + 1) % slider.length;
   slider[index].classList.add('active');
 }
 
-function prev(){
+function prev() {
   slider[index].classList.remove('active');
   index = (index - 1 + slider.length) % slider.length;
   slider[index].classList.add('active');
