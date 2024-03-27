@@ -235,16 +235,17 @@ article{
     background: url(assets/fondo.webp) no-repeat;
     background-size: cover;
     background-position: bottom;
-   /* transform-origin: top;
+    transform-origin: top;
 
     animation: home-animation linear forwards;
     animation-timeline: view();
-    animation-range: exit;*/
-}/*
+    animation-range: exit;
+}
 @keyframes home-animation {
-    25%{ opacity: 1; }
-    70%, 100%{ opacity: 0; scale: 2; }
-}*/
+    10%{opacity: 1;}
+    70%{opacity: 0; scale: 2;}
+    100%{opacity: 0;}
+}
 
 .home .content{
     max-width: 58.7rem;
