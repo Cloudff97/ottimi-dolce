@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index">
+    <meta name="description" content="Tienda en línea de paletas de helado, bombones, y kakes en Pinar del Rio">
+    <title>Ottimi Dolce</title>
+    <link rel="shortcut icon" type="image/x-icon" href="assets/favicon.webp">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" media="all">
+    <link rel="stylesheet" href="index.css" media="all" >
+    <script defer src="index.js"></script>
+</head>
+<body>  
+    <div id="progressbar"></div>
+    <div id="scrollPath"></div>
+
+    <div class="preloader" id="preloader">
+        <div class="loading">CARGANDO</div>
+        <div class="loader"></div>
+    </div>
+
+    <header class="header">
+
+        <div class="logo">
+            <img src="assets/favicon.webp" alt="Logotipo">
+        </div>
+            
+        <nav class="navbar">
+            <a href="#home" class="nav-menu" data-url="home" aria-label="ir a inicio">inicio</a>
+            <a href="#about" class="nav-menu" data-url="about" aria-label="ir a acerca de">acerca de</a>
+            <a href="#menu" class="nav-menu" data-url="menu" aria-label="ir al menu">menú</a>
+            <a href="#ofertas" class="nav-menu" data-url="ofertas" aria-label="ir a ofertas">ofertas</a>
+            <a href="#review" class="nav-menu" data-url="review" aria-label="ir a reseñas">Reseñas</a>
+            <a href="#contact" class="nav-menu" data-url="contact" aria-label="ir a contacto">contacto</a>
+        </nav>
+
+        <div class="icons">
+            <button class="fas fa-search" id="search-btn"></button>
+            <button class="fas fa-bars" id="menu-btn"></button>
+        </div>
+
+        <div class="search-form">
+            <input type="search" id="search-box" placeholder="search here...">
+            <label for="search-box" class="fas fa-search"></label>
+        </div>
+
+    </header>
+
+    <main>
+    <section class="home nav-section" id="home">
+        <div class="content">
+            <h1>tienda en línea:</h1>
+            <div class="autoEscritura"><h2></h2></div>
+            <p>en nuestra tienda en línea encontrarás la mayor exclusividad de productos al mejor precio del mercado.</p>
+            <a href="#menu" class="b-btn btn-home" aria-label="ir al menu">comprar ahora</a>
+        </div>
+            <button class="btn-info">info..</button>
+
+            <article class="info" id="info">
+                <h3 class="heading">Información <span>al cliente</span> </h3>
+                    <div class="img-container">
+                        <img src="assets/info1.webp" alt="info">
+                        <img src="assets/info2.webp" alt="info">
+                        <img src="assets/info3.webp" alt="info">
+                        <img src="assets/info4.webp" alt="info">
+                        <img src="assets/info5.webp" alt="info">
+                    </div>
+                    <button class="btn-cerrar-info">X</button>
+            </article>
+    </section>
+
+    <section class="about nav-section" id="about">
+        <h3 class="heading"> <span>Sobre</span> Nosotros </h3>
+
+        <div class="row">
+            <div class="image">
+                <img src="assets/about.webp" alt="Sobre nosotros">
+            </div>
+
+            <div class="content">
+                <h3>¿qué hace que nuestros productos sean especiales</h3>
+                <p>la exclusividad y variedad del producto es uno de los parámetros fundamentales que llevan nuestros trabajos al siguiente nivel, marcando la diferencia sobre el resto de heladerías y vendedores de paletas en Pinar del Río, ya que trabajamos con la mejor calidad de productos para nuestras <strong>paletas de helado</strong>...</p>
+                <p>aceptamos las opiniones de todos los clientes, para seguir ofreciéndoles una mayor variedad de productos, con diferentes sabores y precios, siendo accesibles para todos...</p>
+                <a href="#review" class="b-btn" aria-label="ir a reseñas">leer más</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="menu nav-section" id="menu">
+
+        <h3 class="heading">Nuestro <span>Menú</span> </h3>
+    
+        <div class="menuContainer">
+        <button class="btn-cambio" data-menu="menu1">Paletas</button>
+        <button class="btn-cambio" data-menu="menu2">Bombones</button>
+        <button class="btn-cambio" data-menu="menu3">Repostería</button>
+        <button class="btn-cambio" data-menu="menu4">Productos</button>
+        </div>
+
+        <div class="box-container menu-ventas" id="menu1">
+
+            <div class="box">
+                <div class="image">
+                    <img src="assets/menu01.webp" alt="menu">
+                </div>
+                <div class="content">
+                    <h4>Paleta de helado con cobertura de chocolate negro</h4>
+                    <div class="price">$200 <span></span> </div>
+                </div>
+            </div>
+    
+            <div class="box box-agotado">
+                <div class="image">
+                    <img src="assets/menu02.webp" alt="menu">
+                    <div class="agotado">agotado</div>
+                </div>
+                <div class="content">
+                    <h4>Paleta de helado con cobertura de chocolate negro y blanco</h4>
+                    <div class="price">$300 <span></span> </div>
+                </div>
+            </div>
+    
+            <div class="box">
+                <div class="image">
+                    <img src="assets/menu03.webp" alt="menu">
+                </div>
+                <div class="content">
+                    <h4>Paleta de helado con cobertuta oscura y mani</h4>
+                    <div class="price">$350 <span></span> </div>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="image">
+                    <img src="assets/menu04.webp" alt="menu">
+                </div>
+                <div class="content">
+                    <h4>Paleta de helado con cobertura oscura y confeti de colores</h4>
+                    <div class="price">$300 <span>350</span> </div>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="image">
+                    <img src="assets/menu05.webp" loading="lazy" alt="menu">
+                </div>
+                <div class="content">
+                    <h4>Paleta de helado con una capa de cobertura oscura, otra capa de cobertura blanca y confeti de colores</h4>
+                    <div class="price">$400 <span></span> </div>
+                </div>
+            </div>
+
+            <div class="box box-agotado">
+                <div class="image">
+                    <img src="assets/menu06.webp" loading="lazy" alt="menu">
+                    <div class="agotado">agotado</div>
+                </div>
+                <div class="content">
+                    <h4>Paleta de helado con cobertura de chocolate blanco</p>
+                    <div class="price">$350 <span></span> </div>
+                </div>
+            </div>
+
+            <div class="box box-agotado">
+                <div class="image">
+                    <img src="assets/menu08.webp" loading="lazy" alt="menu">
+                    <div class="agotado">agotado</div>
+                </div>
+                <div class="content">
+                    <h4>Paleta de helado con cobertura oscura y bombones</h4>
+                    <div class="price">$350 <span>380</span> </div>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="image">
+                    <img src="assets/menu10.webp" loading="lazy" alt="menu">
+                </div>
+                <div class="content">
+                    <h4>Paleta de helado con una capa de cobertura oscura y otra de cobertura blanca</h4>
+                    <div class="price">$300 <span></span> </div>
+                </div>
+            </div>
+
+            <div class="box box-agotado">
+                <div class="image">
+                    <img src="assets/menu13.webp" loading="lazy" alt="menu">
+                    <div class="agotado">agotado</div>
+                </div>
+                <div class="content">
+                    <h4>Paleta de helado con una capa de cobertura oscura y otra de cobertura morada</h4>
+                    <div class="price">$300 <span>$350</span> </div>
+                </div>
+            </div>
+
+            <div class="box box-agotado">
+                <div class="image">
+                    <img src="assets/menu15.webp" loading="lazy" alt="menu">
+                    <div class="agotado">agotado</div>
+                </div>
+                <div class="content">
+                    <h4>Paleta de helado con una capa de cobertura oscura y otra capa de cobertura blanca con un "Te Amo" de fondan comestible</h4>
+                    <div class="price">$350 <span></span> </div>
+                </div>
+            </div>
+    
+        </div>
+    
+    </section>
+
+    <section class="other-menu">
+    
+        <div class="box-container menu-ventas" id="menu2">
+
+            <div class="box">
+                <div class="image">
+                    <img src="assets/omenu01.webp" loading="lazy" alt="vaso de helado">
+                </div>
+                <div class="content">
+                    <h4>vasos de helado con cobertura de chocolate</h4>
+                    <div class="price">$250 <span>$260</span> </div>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="image">
+                    <img src="assets/omenu03.webp" loading="lazy" alt="peter de chocolate">
+                </div>
+                <div class="content">
+                    <h4>tableta de chocolate blanco</h4>
+                    <div class="price">$500 <span></span> </div>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="image">
+                    <img src="assets/omenu04.webp" loading="lazy" alt="peter de chocolate">
+                </div>
+                <div class="content">
+                    <h4>tabletas de chocolate negro</h4>
+                    <div class="price">$400 por unidad <span></span> </div>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="image">
+                    <img src="assets/omenu06.webp" loading="lazy" alt="bombones">
+                </div>
+                <div class="content">
+                    <h4>bombones de chocolate negro, con relleno de mani en forma de pene</h4>
+                    <div class="price">$400 por unidad <span>$360</span> </div>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="image">
+                    <img src="assets/omenu08.webp" loading="lazy" alt="bombones">
+                </div>
+                <div class="content">
+                    <h4>bombones de chocolate negro</h4>
+                    <div class="price">$40 por unidad <span></span> </div>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="image">
+                    <img src="assets/omenu10.webp" loading="lazy" alt="oso de chocolate">
+                </div>
+                <div class="content">
+                    <h4>Caja de bombón, con un oso de chocolate</h4>
+                    <div class="price">$2500<span></span> </div>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="image">
+                    <img src="assets/omenu11.webp" loading="lazy" alt="caja de bombones">
+                </div>
+                <div class="content">
+                    <h4>Caja de 6 bombones de chocolate</h4>
+                    <div class="price">$1500<span></span> </div>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="image">
+                    <img src="assets/omenu12.webp" loading="lazy" alt="caja de bombones">
+                </div>
+                <div class="content">
+                    <h4>Caja de 5 bombones de chocolate</h4>
+                    <div class="price">$1500<span></span> </div>
+                </div>
+            </div>
+    
+        </div>
+    
+    </section>
+
+    <section class="menu">
+
+        <div class="box-container menu-ventas" id="menu3">
+
+            <div class="box">
+                <div class="image">
+                    <img src="assets/omenu13.webp" loading="lazy" alt="mini donas">
+                </div>
+                <div class="content">
+                    <h4>Mini Donas</h4>
+                    <div class="price">$60 por unidad<span></span> </div>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="image">
+                    <img src="assets/omenu09.webp" loading="lazy" alt="panetela en forma de pene">
+                </div>
+                <div class="content">
+                    <h4>Panetela en forma de pene de 27cm forrada en chocolate, con agregos de 8 bombones rellenos con maní, y chocolate blanco en las puntas</h4>
+                    <div class="price">$4000<span></span> </div>
+                </div>
+            </div>
+    
+        </div>
+    
+    </section>
+
+    <section class="products-menu menu-ventas" id="menu4">
+        <table>
+            <thead>
+                <tr>
+                    <th>Producto</th>
+                    <th>Nombre</th>
+                    <th>Formato</th>
+                    <th>Precio</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td><img src="assets/cobertura-negra.webp" alt="cobertura oscura"></td>
+                    <td>Cobertura de chocolate oscuro</td>
+                    <td>4kg</td>
+                    <td class="precio">$6500</td>
+                </tr>
+
+                <tr>
+                    <td><img src="assets/pasta-negra.webp" alt="pasta oscura"></td>
+                    <td>Pasta de chocolate oscuro</td>
+                    <td>4kg</td>
+                    <td class="precio">$6500</td>
+                </tr>
+
+                <tr>
+                    <td><img src="assets/cobertura-blanca.webp" alt="cobertura blanca"></td>
+                    <td>Cobertura de chocolate blanco</td>
+                    <td>4kg</td>
+                    <td class="precio">$7500</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+<section class="ofertas nav-section" id="ofertas">
+
+    <h3 class="heading">Últimas <span>ofertas</span> </h3>
+
+    <div class="container">
+
+        <video src="assets/fondo.mp4" muted autoplay loop></video>
+
+        <div class="slider-container active">
+            <div class="slider">
+                <div class="slider-content">
+                    <h3>Especial</h3>
+                    <p>Paleta con helado de chocolate, doble capa de cobertura de chocolate negro, maní, y un derretido de chocolate extra.</p>
+                    <a href="#menu" class="slider-btn">Comprar</a>
+                </div>
+                <div class="image">
+                    <img src="assets/menu03.webp" loading="lazy" alt="paleta de mani">
+                </div>
+            </div>
+        </div>
+
+        <div class="slider-container">
+            <div class="slider">
+                <div class="slider-content">
+                    <h3>Helado</h3>
+                    <p>Paleta con helado de chocolate, una capa de cobertura negra, otra capa de cobertura blanca y conffety.</p>
+                    <a href="#menu" class="slider-btn">Comprar</a>
+                </div>
+                <div class="image">
+                    <img src="assets/menu05.webp" loading="lazy" alt="paleta">
+                </div>
+            </div>
+        </div>
+
+        <div class="slider-container">
+            <div class="slider">
+                <div class="slider-content">
+                    <h3>Especial</h3>
+                    <p>Paleta de helado de chocolate con doble capa de cobertura de chocolate negro, bombones, y un derretido de chocolate extra.</p>
+                    <a href="#menu" class="slider-btn">Comprar</a>
+                </div>
+                <div class="image">
+                    <img src="assets/menu08.webp" loading="lazy" alt="paleta con bombones">
+                </div>
+            </div>
+        </div>
+
+        <div id="prev"> < </div>
+        <div id="next"> > </div>
+
+    </div>
+        
+</section>
+
+</main>
+
+<aside>
+    
+<article class="review nav-section" id="review">
+
+    <h3 class="heading">Opinión <span>del cliente</span> </h3>
+
+    <div class="box-container">
+
+        <div class="box">
+            <img class="resena" src="assets/resena.webp" alt="reseña">
+            <p>Hola a todos... recomiendo al 100% todos estos productos, he quedado muy complacido con el delicioso sabor y la calidad de sus paletas, sin duda "son los mejores"</p>
+            <img src="assets/i.webp" class="user" alt="cliente">
+            <h3>client 01</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+        </div>
+
+        <div class="box">
+            <img class="resena" src="assets/resena.webp" alt="reseña">
+            <p>Hola... he probado una gran variedad de paletas de helado, por eso les recomiendo a todos comprar en esta tienda, les habla un cliente súper satisfecho. Gracias</p>
+            <img src="assets/m.webp" class="user" alt="cliente">
+            <h3>client 02</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+        </div>
+
+        <div class="box">
+            <img class="resena" src="assets/resena.webp" alt="reseña">
+            <p>Gracias Ottimi Dolce por trabajar con calidad y esfuerzo... sus paletas se han convertido en una adicción para mi... "LAS AMO" mi recomendación es 200%</p>
+            <img src="assets/y.webp" class="user" alt="cliente">
+            <h3>client 03</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+        </div>
+
+    </div>
+
+</article>
+
+<article class="contact nav-section" id="contact">
+    <h3 class="heading"> <span>Ponerse</span> en contacto </h3>
+    <div class="row">
+        <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1463.747672152247!2d-83.69573599361036!3d22.4134834191645!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f34ac178c85d5dd%3A0xe909eb5ba28151f2!2sGerardo%20Medina%20%26%20Antonio%20Maceo%2C%20Pinar%20del%20R%C3%ADo%2C%20Cuba!5e0!3m2!1ses-419!2sus!4v1701472622197!5m2!1ses-419!2sus" title="mapa" allowfullscreen="" loading="lazy">
+        </iframe>
+
+        <form action="">
+            <h3>contactar</h3>
+            <div class="inputBox">
+                <span class="fas fa-user"></span>
+                <input type="text" placeholder="nombre">
+            </div>
+            <div class="inputBox">
+                <span class="fas fa-envelope"></span>
+                <input type="email" placeholder="correo">
+            </div>
+            <div class="inputBox">
+                <span class="fas fa-phone"></span>
+                <input type="number" placeholder="teléfono">
+            </div>
+            <input type="sumbit" value="contactar ahora" class="b-btn">
+        </form>
+    </div>
+</article>
+
+</aside>
+
+<footer>
+<section class="footer">
+
+<section class="footer-container">
+    <div class="share-y">
+        <div class="image-y">
+            <img src="assets/i.webp" alt="Yasmany" loading="lazy">
+        </div>
+        <div class="share">
+            <a href="#" class="fab fa-facebook-f"></a>
+            <a href="#" class="fab fa-whatsapp"></a>
+            <a href="tel:+5355578782" class="fab fa-user"></a>
+        </div>
+    </div>
+
+    <div class="share-m">
+        <div class="image-m">
+            <img src="assets/m.webp" alt="Mailin" loading="lazy">
+        </div>
+        <div class="share">
+            <a href="#" class="fab fa-facebook-f"></a>
+            <a href="#" class="fab fa-whatsapp"></a>
+            <a href="tel:+5351371751" class="fab fa-user"></a>
+        </div>
+    </div>
+</section>
+
+    <div class="credit">created by <span>mr. yasmany web designer</span> | all rights reserved</div>
+</section>
+</footer>
+
+</body>
+</html>
