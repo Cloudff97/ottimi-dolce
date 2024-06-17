@@ -13,13 +13,13 @@
     <script defer src="index.js"></script>
 </head>
 <body>  
-    <div id="progressbar"></div>
-    <div id="scrollPath"></div>
-
     <div class="preloader" id="preloader">
         <div class="loading">CARGANDO</div>
         <div class="loader"></div>
     </div>
+
+    <div id="progressbar"></div>
+    <div id="scrollPath"></div>
 
     <header class="header">
 
@@ -37,13 +37,18 @@
         </nav>
 
         <div class="icons">
-            <button class="fas fa-search" id="search-btn"></button>
-            <button class="fas fa-bars" id="menu-btn"></button>
+            <button id="search-btn">
+                <img class="favicon" src="assets/favicon-search.svg" alt="buscar">
+            </button>
+
+            <button class="menu-btn" id="menu-btn">
+                <img class="favicon" src="assets/favicon-menu.svg" alt="menu">
+            </button>
         </div>
 
         <div class="search-form">
             <input type="search" id="search-box" placeholder="search here...">
-            <label for="search-box" class="fas fa-search"></label>
+            <label for="search-box">!!!</label>
         </div>
 
     </header>
@@ -53,7 +58,7 @@
         <div class="content">
             <h1>tienda en línea:</h1>
             <div class="autoEscritura"><h2></h2></div>
-            <p>en nuestra tienda en línea encontrarás la mayor exclusividad de productos al mejor precio del mercado.</p>
+            <p>en nuestra tienda en línea le ofrecemos la mayor exclusividad de productos al mejor precio del mercado.</p>
             <a href="#menu" class="b-btn btn-home" aria-label="ir al menu">comprar ahora</a>
         </div>
             <button class="btn-info">info..</button>
