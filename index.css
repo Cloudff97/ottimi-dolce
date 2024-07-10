@@ -85,12 +85,12 @@ html{
     background: rgba(255,255,255,.05);
 }
 
-#progressbar{
+#progressBar{
     position: fixed;
     top: 0;
-    right: 0;
-    width: 9px;
-    height: 100%;
+    left: 0;
+    width: 0%;
+    height: .5rem;
     background: linear-gradient(to top, #008aff, #00ffe7);
 
     animation: scrollbar 4s linear infinite;
@@ -100,7 +100,7 @@ html{
     50%{filter: hue-rotate(360deg);}
 }
 
-#progressbar:before{
+#progressBar:before{
     content:'';
     position: absolute;
     top: 0;
@@ -111,7 +111,7 @@ html{
     filter: blur(10px);
 }
 
-#progressbar:after{
+#progressBar:after{
     content:'';
     position: absolute;
     top: 0;
@@ -1075,7 +1075,7 @@ video{
 
    .header{
         background: var(--bg);
-        top: 0; left: 0; right: 0;
+        top: .3rem; left: 0; right: 0;
         border-radius: initial;
     }
 

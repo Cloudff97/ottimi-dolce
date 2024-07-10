@@ -6,12 +6,13 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-const progress = document.getElementById('progressbar');
-let totalHeigth = document.body.scrollHeight - window.innerHeight;
-window.onscroll = function() {
-  let progressHeigth = (window.pageYOffset / totalHeigth) * 100;
-  progress.style.height = progressHeigth + "%";
-}
+const $progressBar = document.getElementById('progressBar');
+window.addEventListener('scroll', () => {
+  let height = document.body.scrollHeight - window.innerHeight;
+  let scrollPosition = document.documentElement.scrollTop;
+  let width = (scrollPosition / height) * 100;
+  $progressBar.style.width = `${width}%`;
+});
 
 const navMenu = document.querySelectorAll('.nav-menu');
 const navSection = document.querySelectorAll('.nav-section');
