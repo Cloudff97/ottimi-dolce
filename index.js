@@ -1,8 +1,8 @@
 (() => {
 document.addEventListener("DOMContentLoaded", () => {
-  const preloader = document.getElementById('preloader');
+  const $preloader = document.getElementById('preloader');
   window.addEventListener('load', () => {
-    preloader.style.display = "none";
+    $preloader.style.display = "none";
   });
 });
 
@@ -19,10 +19,10 @@ const navSection = document.querySelectorAll('.nav-section');
   const functionObserver = (entries, observer) => {
     entries.forEach((entry) => {
       if(entry.isIntersecting) {
-        const navSectionActual = Array.from(navMenu).find(item => item.dataset.url === entry.target.id)
-        navSectionActual.classList.add('visible')
+        const sectionActual = Array.from(navMenu).find(item => item.dataset.url === entry.target.id)
+        sectionActual.classList.add('visible')
         for(item of navMenu) {
-          if(item !== navSectionActual) {
+          if(item !== sectionActual) {
             item.classList.remove('visible')
           }
         }
@@ -30,8 +30,6 @@ const navSection = document.querySelectorAll('.nav-section');
     });
   }
 const observer = new IntersectionObserver(functionObserver, {
-  root: null,
-  rootMargin: '0px 0px 0px 0px',
   threshold: 0.8
 });
 navSection.forEach(section => observer.observe(section));
@@ -43,9 +41,9 @@ const menuBtn = document.querySelector("#menu-btn");
     searchForm.classList.remove("active");
   });
 
-  const searchForm = document.querySelector(".search-form");
-  const searchFormInput = document.querySelector(".search-form input");
-  const searchBtn = document.querySelector("#search-btn");
+const searchForm = document.querySelector(".search-form");
+const searchFormInput = document.querySelector(".search-form input");
+const searchBtn = document.querySelector("#search-btn");
   searchBtn.addEventListener('click', () => {
     searchForm.classList.toggle("active");
     searchFormInput.focus();
@@ -106,6 +104,24 @@ document.addEventListener('DOMContentLoaded', (event) => {
     });
   });
 });
+
+function videoIntersecting() {
+  const $videos = document.querySelectorAll('video[data-intersecting-video]');
+  const callback = (entries) => {
+      entries.forEach(entry => {
+          if(entry.isIntersecting) {
+              entry.target.play();
+          } else {
+              entry.target.pause();
+          }
+      });
+  }
+  const observer = new IntersectionObserver(callback, {
+      threshold: .1
+  })
+  $videos.forEach((element) => observer.observe(element));
+}
+videoIntersecting();
 
 const slider = document.querySelectorAll('.slider-container');
 const nextSlider = document.querySelector('#next');
