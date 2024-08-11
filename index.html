@@ -14,6 +14,7 @@
     <link rel="shortcut icon" type="image/x-icon" href="assets/favicon.webp">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" media="all">
     <link rel="stylesheet" href="index.css" media="all" >
+    <script defer src="index.js"></script>
 </head>
 <body>  
     <div class="preloader" id="preloader">
@@ -80,7 +81,7 @@
     </section>
 
     <section class="about nav-section" id="about">
-        <h3 class="heading"> <span>Sobre</span> Nosotros </h3>
+        <h3 class="heading"> <span>Sobre</span> Nosotros</h3>
 
         <div class="row">
             <div class="image">
@@ -171,10 +172,9 @@
                 </div>
             </div>
 
-            <div class="box box-agotado">
+            <div class="box">
                 <div class="image">
                     <img src="assets/menu08.webp" loading="lazy" alt="menu">
-                    <div class="agotado">agotado</div>
                 </div>
                 <div class="content">
                     <h4>Paleta de helado con cobertura oscura y bombones</h4>
@@ -350,21 +350,35 @@
                     <td><img src="assets/cobertura-negra.webp" alt="cobertura oscura"></td>
                     <td>Cobertura de chocolate oscuro</td>
                     <td>4kg</td>
-                    <td class="precio">$6500</td>
+                    <td class="precio">$7000</td>
                 </tr>
 
                 <tr>
                     <td><img src="assets/pasta-negra.webp" alt="pasta oscura"></td>
                     <td>Pasta de chocolate oscuro</td>
                     <td>4kg</td>
-                    <td class="precio">$6500</td>
+                    <td class="precio">$7000</td>
                 </tr>
 
                 <tr>
                     <td><img src="assets/cobertura-blanca.webp" alt="cobertura blanca"></td>
                     <td>Cobertura de chocolate blanco</td>
                     <td>4kg</td>
-                    <td class="precio">$7500</td>
+                    <td class="precio">$8500</td>
+                </tr>
+
+                <tr>
+                    <td><img src="assets/pasta-oscura-10k.webp" alt="pasta oscura de 10kg"></td>
+                    <td>Pasta de chocolate oscuro</td>
+                    <td>10kg</td>
+                    <td class="precio">$16000</td>
+                </tr>
+
+                <tr>
+                    <td><img src="assets/confeti.webp" alt="confeti"></td>
+                    <td>Confeti</td>
+                    <td>500g</td>
+                    <td class="precio">$2500</td>
                 </tr>
             </tbody>
         </table>
@@ -376,7 +390,7 @@
 
     <div class="container">
 
-        <video src="assets/fondo.mp4" muted data-intersecting-video loop></video>
+        <video src="assets/fondo.mp4" muted loop data-intersecting-video></video>
 
         <div class="slider-container active">
             <div class="slider">
@@ -490,15 +504,15 @@
             <h3>contactar</h3>
             <div class="inputBox">
                 <span class="fas fa-user"></span>
-                <input type="text" placeholder="nombre">
+                <input type="text" placeholder="nombre" required>
             </div>
             <div class="inputBox">
                 <span class="fas fa-envelope"></span>
-                <input type="email" placeholder="correo">
+                <input type="email" placeholder="correo" required>
             </div>
             <div class="inputBox">
                 <span class="fas fa-phone"></span>
-                <input type="number" placeholder="teléfono">
+                <input type="number" placeholder="teléfono" required>
             </div>
             <input type="submit" value="contactar ahora" class="b-btn">
         </form>
@@ -537,6 +551,5 @@
     <div class="credit">created by <span>mr. yasmany web designer</span> | @all rights reserved</div>
 </section>
 </footer>
-<script src="index.js"></script>
 </body>
 </html>

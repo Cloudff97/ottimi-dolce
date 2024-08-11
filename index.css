@@ -22,6 +22,7 @@ html{
     overflow-x: hidden;
     scroll-padding-top: 6rem;
     scroll-behavior: smooth;
+    scrollbar-width: none;
 }
 
 .preloader{
@@ -72,10 +73,6 @@ html{
     animation-delay: 1s;
 }
 
-::-webkit-scrollbar{
-    width: 0;
-}
-
 #scrollPath{
     position: fixed;
     top: 0;
@@ -124,11 +121,6 @@ html{
 
 body{
     background: var(--bg);
-}
-
-section,
-article{
-    padding: 2rem 7%;
 }
 
 .heading{
@@ -436,6 +428,10 @@ article{
     scale: 1.8;
 }
 
+.about{
+    padding: 2rem 7%;
+}
+
 .about .row{
     display: flex;
     align-items: center;
@@ -475,14 +471,11 @@ article{
 #menu4{
     display: none;
 }
-
 #menu1.active,
 #menu2.active,
-#menu3.active{
-    display: grid;
-}
+#menu3.active,
 #menu4.active{
-    display: flex;
+    display: grid;
 }
 
 .menuContainer{
@@ -553,6 +546,10 @@ article{
     filter: blur(10px);
 }
 
+.menu{
+    padding: 0 7%;
+}
+
 .menu .box-container{
     grid-template-columns: repeat(auto-fit, minmax(24rem, 60rem));
     gap: 4rem;
@@ -607,6 +604,10 @@ article{
     font-size: 1.5rem;
 }
 
+.other-menu{
+    padding: 0 7%;
+}
+
 .other-menu .box-container{
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(35rem, 1fr));
@@ -622,20 +623,20 @@ article{
     box-shadow: inset 0 0 25px 0 #e2d5d5;
 }
 
-.products-menu{
+section .products-menu{
+    width: 100%;
+    /* max-height: calc(89% - .8rem); */
     justify-content: center;
     align-items: center;
-    position: relative;
-    height: 50vh;
+    position: absolute;
 }
 
 table{
-    width: 50%;
-    max-height: calc(89% - .8rem);
+    width: 60%;
     background: #575958;
     border-radius: 2rem;
-    position: absolute;
-    top: 0;
+    position: relative;
+    margin: 0 auto;
 }
 
 td img{
@@ -701,12 +702,8 @@ tbody tr:hover{
     opacity: .2;
 }
 
-video{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -1;
+.ofertas{
+    padding: 2rem 7%;
 }
 
 .ofertas .container{
@@ -715,6 +712,14 @@ video{
     align-items: center;
     justify-content: center;
     margin: 1rem auto;
+}
+
+video{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
 }
 
 .ofertas .slider-container .slider{
@@ -823,6 +828,10 @@ video{
     gap: 1.5rem;
 }
 
+.review{
+    padding: 2rem 7%;
+}
+
 .review .box-container .box{
     border: var(--border);
     text-align: center;
@@ -891,6 +900,10 @@ video{
     font-size: 1.5rem;
     color: var(--main-color);
     padding-bottom: 1rem;
+}
+
+.contact{
+    padding: 2rem 7%;
 }
 
 .contact .row{
