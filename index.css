@@ -250,14 +250,6 @@ body{
     display: flex;
     align-items: center;
     place-content: center;
-    background: linear-gradient(#1e1d1d, #000000, #050506, #000000);
-    animation: homeAnimation 3s linear backwards;
-}
-@keyframes homeAnimation{
-    0%{
-        opacity: 0;
-        transform: translateY(-8rem);
-    }
 }
 
 .home .content{
@@ -588,13 +580,13 @@ body{
 
 .box-container .box .content{
     font-size: 1.5rem;
-    color: var(--main-color);
+    color: #cac3c3;
     font-style: italic;
     grid-column-start: 2;
 }
 
 .box-container .box .content .price{
-    color: #fff;
+    color: var(--main-color);
     font-size: 2.5rem;
 }
 
@@ -625,7 +617,6 @@ body{
 
 section .products-menu{
     width: 100%;
-    /* max-height: calc(89% - .8rem); */
     justify-content: center;
     align-items: center;
     position: absolute;
@@ -1060,11 +1051,7 @@ video{
     .home .img-container{
         margin: 9rem 0;
     }
-
-    section, article{
-        padding: 2rem;
-    }
-
+ 
     .btn-cambio{
         width: 9.4rem;
         height: 4rem;
