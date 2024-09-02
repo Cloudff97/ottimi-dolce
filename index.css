@@ -125,6 +125,7 @@ body{
 }
 
 .b-btn{
+    user-select: none;
     margin-top: 1rem;
     display: inline-block;
     padding: .9rem 1.8rem;
@@ -377,7 +378,7 @@ body{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    padding-top: 8rem;
+    padding-top: 4rem;
 }
 
 .home .info img{
@@ -393,7 +394,7 @@ body{
 
 .home .info .btn-cerrar-info{
     position: absolute;
-    top: 24rem;
+    top: 18rem;
     right: 8rem;
     width: 5rem;
     height: 5rem;
@@ -449,13 +450,15 @@ body{
 #menu1,
 #menu2,
 #menu3,
-#menu4{
+#menu4,
+#menu5{
     display: none;
 }
 #menu1.active,
 #menu2.active,
 #menu3.active,
-#menu4.active{
+#menu4.active,
+#menu5.active{
     display: grid;
 }
 
@@ -467,6 +470,7 @@ body{
 
 .btn-cambio{
     cursor: pointer;
+    user-select: none;
     position: relative;
     font-size: 1.8rem;
     color:#fff;
@@ -530,6 +534,15 @@ body{
     padding: 0 7%;
 }
 
+.menu-ofertas img{
+    width: 12rem;
+    border-radius: 20px;
+}
+.menu-ofertas .box .content .price-ofertas{
+    color: var(--main-color);
+    font-size: 2.5rem;
+}
+
 .menu .box-container{
     grid-template-columns: repeat(auto-fit, minmax(24rem, 60rem));
     gap: 4rem;
@@ -579,7 +592,7 @@ body{
 .menu .box-container .content .description{
     text-transform: initial;
     font-style: italic;
-    max-width: 210px;
+    max-width: 200px;
 }
 
 .other-menu{
@@ -1038,14 +1051,13 @@ video{
         margin: 9rem 0;
     }
  
-    .btn-cambio{
-        width: 9.4rem;
-        height: 4rem;
+    .menuContainer .btn-cambio{
         font-size: 1.3rem;
+        margin: 0 4px;
+
     }
     .btn-cambio:hover{
         scale: 1.1;
-        font-size: 1.3rem;
     }
 
     .menu .box-container .box{

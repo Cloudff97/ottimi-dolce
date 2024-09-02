@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const $preloader = document.getElementById('preloader');
   window.addEventListener('load', () => {
     $preloader.style.display = "none";
+    document.getElementById('menu1').classList.add('active');
   });
 });
 
@@ -98,9 +99,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
         menu.classList.remove('active');
       })
       menu.classList.add('active');
-    });
-    window.addEventListener('load', () => {
-      document.getElementById('menu1').classList.add('active');
     });
   });
 });
