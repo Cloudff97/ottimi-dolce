@@ -534,6 +534,10 @@ body{
     padding: 0 7%;
 }
 
+.box-ofertas{
+    max-width: 530px;
+}
+
 .menu-ofertas img{
     width: 12rem;
     border-radius: 20px;
