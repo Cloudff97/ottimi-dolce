@@ -1081,8 +1081,7 @@ video{
 
    .header{
         background: var(--bg);
-        top: .3rem; left: 0; right: 0;
-        border-radius: initial;
+        top: .5rem; left: 15px; right: 15px;
     }
 
     .header .navbar{
